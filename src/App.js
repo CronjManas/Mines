@@ -333,7 +333,7 @@ saveScore = () => {
 
 
 
-                {leaderBoard!==null? <div class="modal" id="mymodal2">
+                {(leaderBoard!==null)? <div class="modal" id="mymodal2">
                     <div class="modal-dialog">
                         <div class="modal-content">
 
@@ -358,7 +358,7 @@ saveScore = () => {
                         </div>
                       </div>
                     </div>
-                </div>:alert('No user have played the game!!')}
+                </div>:null}
                
 
 
