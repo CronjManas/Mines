@@ -70,6 +70,7 @@ class App extends Component {
     localData.score = 0;
     localData.display = "none";
     localData.target = 0;
+    localData.showScore = 0;
     
     this.Calculate(board, diamond);
     localStorage.setItem("localData", JSON.stringify(localData))
@@ -273,7 +274,7 @@ saveScore = () => {
           </div>
         <button type="button" onClick={this.startGame}>Start Game</button>
         {abc !== null?((abc.showScore===1)?<button data-toggle="modal" data-target="#mymodal">Save Score</button>:null):null}
-      
+        {abc!=null?<button data-toggle="modal" data-target="#mymodal2">Leaderboard</button>:null}
         <div className="container">
           <div className="row">
             <div className="col col-sm-6 col-md-6 offset-md-3 col-xs-6 offset-xs-3 offset-sm-3 ">
@@ -328,7 +329,32 @@ saveScore = () => {
 
 
 
-                    
+                <div class="modal" id="mymodal2">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                        
+                        <div class="modal-header">
+                            <h4 class="modal-title">Leader Board</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        
+                        <div class="modal-body">
+                            <ul>
+                              {
+                                leaderBoard.map(leader => {
+                                  return (
+                                    <li>{leader.name} : {leader.score}</li>
+                                  )
+                                })
+                              }
+                            
+                            </ul>
+                        </div>
+                      </div>
+                    </div>
+                </div>
 
 
 
