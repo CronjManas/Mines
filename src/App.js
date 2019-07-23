@@ -358,7 +358,7 @@ saveScore = () => {
                         </div>
                       </div>
                     </div>
-                </div>:null}
+                </div>:alert('No user have played the game!!')}
                
 
 
