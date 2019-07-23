@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 
 let localData={};
@@ -329,7 +329,7 @@ saveScore = () => {
 
 
 
-                <div class="modal" id="mymodal2">
+                {leaderBoard!==null? <div class="modal" id="mymodal2">
                     <div class="modal-dialog">
                         <div class="modal-content">
 
@@ -354,7 +354,8 @@ saveScore = () => {
                         </div>
                       </div>
                     </div>
-                </div>
+                </div>:null}
+               
 
 
 
