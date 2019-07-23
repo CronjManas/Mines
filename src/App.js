@@ -188,7 +188,11 @@ class App extends Component {
         })
     }
 
-    }else{
+    }else if(localData.showScore===1){
+      alert('Game Over!!!! Restart your Game.')
+    }
+    
+    else{
       // alert('ama');
       if(localData.color[i][j]==='blue'){
         localData.totalCount+=1;
